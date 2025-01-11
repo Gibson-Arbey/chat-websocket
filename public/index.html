@@ -4,22 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebSocket</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
   </head>
 
-  <body class="bg-light">
-    <div class="container py-5">
-      <h1 class="mb-4">Chat Websocket - <small>Status</small></h1>
+  <body class="bg-dark">
+    <div class="d-flex justify-content-center">
+      <div class="py-5" style="max-width: 100%;">
+        <h1 class="mb-4" style="color: #ccc">
+          Chat Websocket - <small>Status</small>
+        </h1>
 
-      <div class="card p-4 shadow-sm">
-        <form class="mb-3">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Enviar mensaje" />
-            <button class="btn btn-primary" type="submit">Enviar</button>
-          </div>
-        </form>
+        <div
+          class="card p-4 shadow-sm"
+          style="background-color: #ccc;"
+        >
+          <form class="mb-3">
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enviar mensaje"
+                style="background-color: #eee"
+              />
+              <button class="btn btn-dark" type="submit">Enviar</button>
+            </div>
+          </form>
 
-        <ul id="messages" class="list-group"></ul>
+          <ul id="messages" class="list-group"></ul>
+        </div>
       </div>
     </div>
 
@@ -38,6 +53,7 @@
       function renderMessage(message) {
         const li = document.createElement("li");
         li.classList.add("list-group-item", "mb-2");
+
         li.innerHTML = message;
         messagesElem.prepend(li);
       }
