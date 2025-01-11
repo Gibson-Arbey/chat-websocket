@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start:dev": "tsnd --respawn --clear src/app.ts",
+    "start:dev": "ts-node-dev --respawn --clear src/app.ts",
     "build": "rimraf ./dist && tsc",
     "start": "npm run build && node dist/app.js"
   },
